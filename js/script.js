@@ -33,18 +33,17 @@ function list(){
 }
 
 //finding someone special
-function search(lastName) {
+function search(lastName){
   var contactsLength = contacts.length;
-    for (var i=0; i < contactsLength; i++) {
-      if (lastName == lastName){
-        printPerson(contacts[i]);
-      } else {
-        console.log("Sorry no name has been found");
-      };
+  for (var i=0; i < contactsLength; i++) {
+    if (lastName == lastName){
+      printPerson(contacts[i]);
+    } else {
+      console.log("Sorry no name has been found");
     };
- }
+  };
+}
 
-//Add new people to list
 function add(firstName, lastName, email, phoneNumber){
   contacts[contacts.length] = {
     firstName: firstName,
@@ -54,6 +53,6 @@ function add(firstName, lastName, email, phoneNumber){
   }
 };
 
-add("Steve", "Jobs", "sjobs@example.com", "(555) 555-4949");
+add("Steve", "Jobs", "sbjobs@example.com", "(555) 555-4949");
 search("Jones");
 list();
